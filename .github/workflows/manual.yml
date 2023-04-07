@@ -12,10 +12,10 @@ name: Manual workflow
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: SQL/Order Status
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Sleep Number Job
+        id: Deploy
         uses: actions/hello-world-docker-action@v2
         with:
           who-to-greet: orderNumber = ${{inputs.First_Name}}
