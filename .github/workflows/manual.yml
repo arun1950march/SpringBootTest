@@ -6,7 +6,10 @@ name: Manual workflow
         description: Person First Name
         required: true
         default: Java
-      Last name: null
+      Last name:
+      description: Person last Name
+      required: true
+      default: World
     output:
       time:
         description: The time we greeted you
