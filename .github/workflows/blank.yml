@@ -24,7 +24,7 @@ on:
       using: 'docker'
       image: 'Dockerfile'
       args:
-        - 'name=${{ inputs.who-to-greet }}'
+        - 'name=${{who-to-greet}}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
