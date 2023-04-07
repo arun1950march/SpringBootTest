@@ -18,7 +18,7 @@ jobs:
         id: hello
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: ${{inputs.First_Name}}
+          who-to-greet: orderNumber = ${{inputs.First_Name}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
