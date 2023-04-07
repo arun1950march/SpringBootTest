@@ -6,27 +6,16 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    
     inputs:
-      First_Name:
-      Last name:
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
-      args:
-       -${{inputs.First_Name }}
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "greet"
-  welcome:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.FirstName }} ${{ github.event.inputs.LastName }}"
-        
+     who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
