@@ -14,9 +14,8 @@ on:
     runs:
       using: 'docker'
       image: 'Dockerfile'
-      build-args:
-      - name: VERSION
-        value: '${{ inputs.First_Name }}'
+      args:
+       -'${{ inputs.First_Name }}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
