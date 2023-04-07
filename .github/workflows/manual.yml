@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Sleep Number Job
         id: Deploy
-        uses: actions/SpringBootTest
+        uses: actions/SpringBootTest@v2
         with:
           order-number: orderNumber = ${{inputs.order-number}}
       # Use the output from the `hello` step
