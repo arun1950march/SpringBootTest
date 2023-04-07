@@ -40,4 +40,4 @@ jobs:
         using:'Docker'
         image:'DockerFile'
         args:
-         -"hello world"
+         - ${{ inputs.FirstName }}
