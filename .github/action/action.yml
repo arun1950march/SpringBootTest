@@ -1,15 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Sleep Number'
+description: 'record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  order-number:  # id of input
+    description: 'Order Number'
     required: true
-    default: 'World'
+    default: '0000000'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'Order Number is '
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '${{ inputs.who-to-greet }}'
+    - '${{ inputs.order-number }}'
