@@ -15,7 +15,7 @@ on:
       using: 'docker'
       image: 'Dockerfile'
       args:
-       -${{First_Name }}
+       -${{inputs.First_Name }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
