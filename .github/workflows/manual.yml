@@ -1,5 +1,14 @@
-on: [push]
-
+name: Manual workflow
+'on':
+  workflow_dispatch:
+    inputs:
+      First_Name:
+        description: Person First Name
+        required: true
+        default: Java
+      Last name: null
+    
+    
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -9,7 +18,7 @@ jobs:
         id: hello
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: ${{inputs.First_Name}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
