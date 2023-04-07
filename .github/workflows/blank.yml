@@ -20,11 +20,7 @@ on:
     outputs:
       time: # id of output
         description: 'The time we greeted you'
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
-      args:
-        - 'name=${{who-to-greet}}'
+    
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -44,6 +40,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        runs:
+          using: 'docker'
+          image: 'Dockerfile'
+          args:
+           - 'name=${{inputs.who-to-greet}}'
+          
