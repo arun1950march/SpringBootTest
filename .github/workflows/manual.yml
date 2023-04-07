@@ -18,7 +18,7 @@ jobs:
         id: Deploy
         uses: arun1950march/SpringBootTest@main
         with:
-          order-number: orderNumber = ${{inputs.order-number}}
+          order-number: ${{inputs.order-number}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.Deploy.outputs.time }}"
