@@ -36,5 +36,5 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.FirstName }} ${{ github.event.inputs.LastName }}"
+      run: echo "Hello ${{ github.event.workflow_dispatch.inputs.FirstName }} ${{ workflow_dispatch.inputs.LastName }}"
         
