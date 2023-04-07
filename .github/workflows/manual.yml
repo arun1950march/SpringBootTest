@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Sleep Number Job
         id: Deploy
-        uses: actions/hello-world-docker-action@v2
+        uses: actions/SpringBootTest
         with:
           order-number: orderNumber = ${{inputs.order-number}}
       # Use the output from the `hello` step
