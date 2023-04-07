@@ -9,13 +9,14 @@ on:
     # Inputs the workflow accepts.
     
     inputs:
-      name:
+      First_Name:
+      Last name:
     runs:
       using: 'docker'
       image: 'Dockerfile'
       build-args:
       - name: VERSION
-        value: ${{ inputs.name }}
+        value: ${{ First_Name }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
