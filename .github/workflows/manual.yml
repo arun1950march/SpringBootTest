@@ -24,13 +24,13 @@ jobs:
         id: Deploy
         uses:  actions/hello-world-docker-action@v2
         with:
-         context: .
-         file: ./Dockerfile
-         order-number: ${{inputs.order-number}}
-         ordered-date: ${{inputs.ordered-date}}
-         build-args: |
-           - ordered-date=${{ inputs.ordered-date }} 
-           - order-number=${{ inputs.order-number }}
+          file: api/dockerfiles/api/Dockerfile
+          context: ./api
+          push: false
+          tags: myimage:latest
+          order-number: ${{inputs.order-number}}
+          ordered-date: ${{inputs.ordered-date}}
+         
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.Deploy.outputs.time }}"
