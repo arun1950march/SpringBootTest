@@ -21,9 +21,11 @@ jobs:
         id: Deploy
         uses: arun1950march/SpringBootTest@main
         with:
-          order-number: ${{inputs.order-number}}
-          ordered-date: ${{inputs.ordered-date}}
-          build-args: |
+         context: .
+         file: ./Dockerfile
+         order-number: ${{inputs.order-number}}
+         ordered-date: ${{inputs.ordered-date}}
+         build-args: |
            - ordered-date=${{ inputs.ordered-date }} 
            - order-number=${{ inputs.order-number }}
       # Use the output from the `hello` step
