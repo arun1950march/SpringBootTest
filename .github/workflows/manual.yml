@@ -23,7 +23,9 @@ jobs:
         with:
           order-number: ${{inputs.order-number}}
           ordered-date: ${{inputs.ordered-date}}
-          build-args: ordered-date=${{ inputs.ordered-date }}, order-number=${{ inputs.order-number }}
+          build-args: |
+           ordered-date=${{ inputs.ordered-date }} 
+           order-number=${{ inputs.order-number }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.Deploy.outputs.time }}"
