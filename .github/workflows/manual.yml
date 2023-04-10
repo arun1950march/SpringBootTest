@@ -10,7 +10,9 @@ name: Manual workflow
         description: Ordered Date
         required: true
         default: "01-JAN-000"
-    
+defaults:
+  run:
+    working-directory: ./arun Sunar  
     
 jobs:
   hello_world_job:
