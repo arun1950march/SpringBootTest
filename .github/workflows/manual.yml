@@ -21,8 +21,8 @@ jobs:
         id: Deploy
         uses:  actions/hello-world-docker-action@v2
         with:
-          file: api/dockerfiles/api/Dockerfile
-          context: ./api
+          dockerfile: ./app/Dockerfile
+          context: app
           push: false
           tags: myimage:latest
           order-number: ${{inputs.order-number}}
