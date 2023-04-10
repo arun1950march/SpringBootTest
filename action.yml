@@ -12,6 +12,12 @@ inputs:
 outputs:
   time:
     description: The time we greeted you
+build:
+  using: docker
+  image: Dockerfile
+  args:
+    - orderNumber = ${{ inputs.order-number }}
+    - date = ${{ inputs.ordered-date }}
 runs:
   using: docker
   image: Dockerfile
