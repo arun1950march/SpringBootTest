@@ -15,9 +15,6 @@ name: Manual workflow
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: scripts
     name: SQL/Order Status
     steps:
       - name: Sleep Number Job
