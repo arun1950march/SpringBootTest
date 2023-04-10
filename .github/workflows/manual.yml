@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Sleep Number Job
         id: Deploy
-        uses: actions/hello-world-composite-action@v1
+        uses:  actions/hello-world-docker-action@v2
         with:
          context: .
          file: ./Dockerfile
