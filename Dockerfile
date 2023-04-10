@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 
-ARG order-number=$orderNumber
+ARG ordered-date
 ARG $ordered-date
 
 Run echo "hello $order-number :: world $ordered-date " 
