@@ -24,6 +24,6 @@ runs:
   args:
     - orderNumber = ${{ inputs.order-number }}
     - date = ${{ inputs.ordered-date }}
-   build-arge: 
+   build-args: 
       - orderNumber = 'sd'
       - date = '001
