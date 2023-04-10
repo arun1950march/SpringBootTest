@@ -16,8 +16,8 @@ build:
   using: docker
   image: Dockerfile
   args:
-    - orderNumber = ${{ inputs.order-number }}
-    - date = ${{ inputs.ordered-date }}
+    - orderNumber = 'sd'
+    - date = '001
 runs:
   using: docker
   image: Dockerfile
