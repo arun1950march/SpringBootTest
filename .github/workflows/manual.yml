@@ -30,4 +30,7 @@ jobs:
          
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.Deploy.outputs.time }}"
+        run: |
+          mkdir -p path/to/artifact-A
+          mkdir -p path/to/artifact-B
+          echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
