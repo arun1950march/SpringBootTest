@@ -11,5 +11,5 @@ RUN npm install -g ts-node nodemon
 COPY . ./
 ENV PORT 8000
 EXPOSE $PORT
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["ts-node", "./src/server.ts"]
