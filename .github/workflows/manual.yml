@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Sleep Number Job
         id: Deploy
-        uses:  actions/hello-world-docker-action@v2
+        uses:  arun1950march/SpringBootTest@main
         with:
           dockerfile: ./app/Dockerfile
           context: app
